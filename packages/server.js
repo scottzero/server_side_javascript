@@ -31,7 +31,7 @@ app.get("/api/v1/papers", (request, response) => {
 app.get("/api/v1/footnotes", (request, response) => {
   database("footnotes")
     .select()
-    .then(papers => {
+    .then(footnotes => {
       response.status(200).json(footnotes);
     })
     .catch(error => {
